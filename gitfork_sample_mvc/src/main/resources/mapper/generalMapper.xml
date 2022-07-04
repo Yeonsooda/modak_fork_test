@@ -6,4 +6,8 @@
 	<select id="poongCount" resultType="java.lang.Integer">
 		select count(*) from board_qna
 	</select>
+	
+	<select id="getUser"  parameterType="String" resultType="UserDto">
+        SELECT * FROM user2 where user_id= #{user_id}
+    </select>
 </mapper>

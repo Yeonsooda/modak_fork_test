@@ -7,18 +7,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 @Repository
-public class BoardDAOPoong implements BoardDAO {
+public class UserDAOYeonsoo implements UserDAOYS {
 	@Autowired
 	private SqlSession sqlSession;
 	
 	@Override
-	public int getCount() {
-		return sqlSession.selectOne("generalSQL.poongCount");
+	public int getCount2() {
+		return sqlSession.selectOne("generalSQL.sooCount");
 		
-	}
-
-	@Override
-	public int getYeonsooCount() {
-		return sqlSession.selectOne("generalSQL.countSoo");
 	}
 }
